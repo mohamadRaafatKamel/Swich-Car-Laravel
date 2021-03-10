@@ -17,4 +17,9 @@ class AddCarController extends Controller
     	 return view('front.addcar');
     }
 
+    public function image(Request $request)
+    {
+
+    }
+
 }
