@@ -38,8 +38,10 @@ Route::get('logout',[UserAuthController::class, 'logout'])->name('logout');
 
 
 ################# add car ############
-Route::get('addcar',[AddCarController::class, 'addcar'])->name('car.add');
-Route::post('image',[UserAuthController::class, 'image'])->name('car.image');
+Route::get('addcar',[AddCarController::class, 'addcar'])->name('addCar.image');
+Route::post('image',[AddCarController::class, 'image'])->name('addCar.image.save');
+Route::get('delete/{id}',[AddCarController::class, 'imageDestroy'])->name('addCar.image.destroy');
+
 
 
 
