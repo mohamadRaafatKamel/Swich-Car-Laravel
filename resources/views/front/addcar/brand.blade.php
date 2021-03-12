@@ -2,6 +2,7 @@
 
 @section('title','design Page')
 
+
 @section('content')
 
     <div class="terms-conditions product-page">
@@ -19,26 +20,62 @@
         </div>
     </div>
 
-
-        <div class="furniture-right">
-            <h3>Subcategories</h3>
-            <div class="right-list-f">
-                <ul>
-                    <li><a href="#"><img width="32" src="images/product/1.png" alt="#" /> Chairs</a></li>
-                    <li><a href="#"><img width="32" src="images/product/2.png" alt="#" /> Office chairs</a></li>
-                    <li><a href="#"><img width="32" src="images/product/1.png" alt="" /> Special chairs</a></li>
-                    <li><a href="#"><img width="32" src="images/product/4.png" alt="" /> Living room</a></li>
-                    <li><a href="#"><img width="32" src="images/product/5.png" alt="" /> Room furniture</a></li>
-                    <li><a href="#"><img width="32" src="images/product/2.png" alt="" /> Tv Furniture</a></li>
-                    <li><a href="#"><img width="32" src="images/product/11.png" alt="" /> Office Chairs</a></li>
-                    <li><a href="#"><img width="32" src="images/product/10.png" alt="" /> Special lights</a></li>
-                    <li><a href="#"><img width="32" src="images/product/4.png" alt="" /> Home office</a></li>
-                    <li><a href="#"><img width="32" src="images/product/10.png" alt="" /> Kids furniture</a></li>
-                    <li><a href="#"><img width="32" src="images/product/11.png" alt="" /> Accessories</a></li>
-                </ul>
+    <div class="furniture-box">
+        <div class="container">
+            <div class="row">
+                <div class="furniture-main">
+                    <h2>الشركه</h2>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="furniture-right">
+                                <div class="right-list-f">
+                                    <ul>
+                                        @if($brands)
+                                            @foreach($brands as $brand)
+                                                <li id="{{$brand->id}}">
+                                                    <a href="#"><img width="32" src="{{asset($brand->image)}}" alt="" />
+                                                        {{$brand->name}}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
+
         </div>
+    </div>
 
 
+@endsection
 
+@section('myScript')
+    <script>
+        $(document).ready(function(){
+            $("li").click(function(){
+                var id = this.id;
+                {{--console.log(id);--}}
+                {{--//window.location.href = "{{\Illuminate\Support\Facades\URL::to('restaurants/20')}}"--}}
+                {{--    window.location.href = "{{R}}";--}}
+
+                $.ajax({
+                    type: 'get',
+                    url: "{{route('addCar.brand.save') }}" ,
+                    data: {
+                        id : id
+                    },
+                    success: function (data) {
+                        //console.log(data);
+                        if(data.success == 1){
+                            location.replace("{{ route('addCar.type') }}");
+                        }
+                    }, error: function (reject) {
+                        //console.log(reject);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

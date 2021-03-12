@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f69de148-7036-4e81-97c0-63c27220548b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AlreadyLoggedIn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/UserAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/UserAuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/addcar/image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/image.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/addcar/brand.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/brand.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,19 +135,26 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1pZxaasH01AFampi6Qvw26xbCPu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\swichCar\swichCarLaravel\app\Http\Middleware" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\www\swichCar\swichCarLaravel\resources\views\front\addcar" />
     </key>
@@ -169,7 +180,11 @@
       <workItem from="1615416988241" duration="1482000" />
       <workItem from="1615551323374" duration="1769000" />
       <workItem from="1615553228901" duration="2081000" />
-      <workItem from="1615555334055" duration="421000" />
+      <workItem from="1615555334055" duration="2220000" />
+      <workItem from="1615557573484" duration="1791000" />
+      <workItem from="1615559382904" duration="9526000" />
+      <workItem from="1615568961092" duration="1818000" />
+      <workItem from="1615570798342" duration="1255000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1615404712390</created>
@@ -192,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615551368857</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="image car">
+      <created>1615555763773</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615555763773</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -43,4 +43,22 @@ class Car extends Model
         $this->count();
     }
 
+    public function userHaveCarNotFinish()
+    {
+        $cars = Car::select()->where('user_id',session('LoggedUser'))->get();
+        if($cars->count()){
+            foreach ($cars as $car){
+                if($car->state == 0){
+                    return $car->id;
+                }
+            }
+        }else{
+            // don't have any car
+            $car = new Car();
+            $car->user_id = session('LoggedUser');
+            $car->save();
+            return $car->id;
+        }
+    }
+
 }

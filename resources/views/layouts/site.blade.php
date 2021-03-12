@@ -37,5 +37,7 @@
       <script src="{{asset('assets/front/js/wow.min.js')}}"></script>
       <!--custom js-->
       <script src="{{asset('assets/front/js/custom.js')}}"></script>
+
+      @yield('myScript')
    </body>
 </html>

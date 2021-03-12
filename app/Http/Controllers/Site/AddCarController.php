@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Models\Brand;
 use App\Models\Car;
 use App\Models\Media;
 use Illuminate\Http\Request;
@@ -14,21 +15,16 @@ class AddCarController extends Controller
 {
     public function addcar()
     {
-        // check if have care or not
-
-        // create empty one if not have
-//        $car = new Car();
-//        $car->user_id = session('LoggedUser');
-//        $car->save();
-
-        $images = Media::select()->where('car_id','2')->get();
-
+        $car = new Car();
+        $carID = $car->userHaveCarNotFinish();
+        session(['CarNotFinish' => $carID ]);
+        $images = Media::select()->where('car_id',$carID)->get();
         return view('front.addcar.image',compact('images'));
     }
 
     public function image(Request $request)
     {
-//        try {
+        try {
             $car = Car::select()->where('user_id',session('LoggedUser'))->first();
             $carId = $car->id;
             $images = $request->image;
@@ -43,9 +39,9 @@ class AddCarController extends Controller
             }
             return redirect()->route('addCar.image');
 
-//        }catch (\Exception $ex){
-//            return redirect()->route('addCar.image')->with(['error'=>'توجد مشكله اعد المحاوله']);
-//        }
+        }catch (\Exception $ex){
+            return redirect()->route('addCar.image')->with(['error'=>'توجد مشكله اعد المحاوله']);
+        }
     }
 
     public function imageDestroy($id)
@@ -69,7 +65,23 @@ class AddCarController extends Controller
 
     public function brand()
     {
-        return view('front.addCar.brand');
+        $brands = Brand::select()->active()->get();
+        return view('front.addCar.brand',compact('brands'));
+    }
+
+    public function setBrand()
+    {
+        try {
+            if(isset($_GET['id'])){
+                $brandID = $_GET['id'];
+                $car = Car::select()->find(session('CarNotFinish'));
+                $car->update(['brand_id'=> $brandID ]);
+                return ['success'=>1];
+            }
+        }catch (\Exception $ex) {
+            return ['error'=>1];
+        }
+
     }
 
 }
