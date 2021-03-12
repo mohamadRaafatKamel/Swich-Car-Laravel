@@ -130,7 +130,7 @@ class UserAuthController extends Controller
     		]);
     		session(['LoggedUser' => session('newUserId')]);
     		session()->pull('newUserId');
-    		return redirect()->route('car.add');
+    		return redirect()->route('addCar.image');
 
         // }catch (\Exception $ex){
         //     return redirect()->route('auth.info')->with(['error'=>'كود غير صحيح']);

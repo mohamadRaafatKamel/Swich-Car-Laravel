@@ -25,4 +25,20 @@ class Media extends Model
         return $query -> select('id', 'car_id', 'type', 'path', 'notes', 'updated_at','created_at');
     }
 
+    public function resetNotes($carId)
+    {
+        $images = Media::select()->where('car_id',$carId)->get();
+        foreach ($images as $image){
+            $image->update(['notes' => Null ]);
+        }
+    }
+
+    public function setPrime($imageId)
+    {
+        $image = Media::find($imageId);
+        if($image){
+            $image->update(['notes' => '1' ]);
+        }
+    }
+
 }

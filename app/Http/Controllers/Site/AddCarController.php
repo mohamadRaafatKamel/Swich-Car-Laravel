@@ -21,14 +21,14 @@ class AddCarController extends Controller
 //        $car->user_id = session('LoggedUser');
 //        $car->save();
 
-        $images = Media::select()->where('car_id','1')->get();
+        $images = Media::select()->where('car_id','2')->get();
 
         return view('front.addcar.image',compact('images'));
     }
 
     public function image(Request $request)
     {
-        try {
+//        try {
             $car = Car::select()->where('user_id',session('LoggedUser'))->first();
             $carId = $car->id;
             $images = $request->image;
@@ -43,9 +43,9 @@ class AddCarController extends Controller
             }
             return redirect()->route('addCar.image');
 
-        }catch (\Exception $ex){
-            return redirect()->route('addCar.image')->with(['error'=>'توجد مشكله اعد المحاوله']);
-        }
+//        }catch (\Exception $ex){
+//            return redirect()->route('addCar.image')->with(['error'=>'توجد مشكله اعد المحاوله']);
+//        }
     }
 
     public function imageDestroy($id)
@@ -55,6 +55,21 @@ class AddCarController extends Controller
             $image->delete();
         }
         return redirect()->route('addCar.image');
+    }
+
+    public function imagePrime($id)
+    {
+        $image = Media::find($id);
+        if($image){
+            $image->resetNotes($image->car_id);
+            $image->setPrime($id);
+        }
+        return redirect()->route('addCar.image');
+    }
+
+    public function brand()
+    {
+        return view('front.addCar.brand');
     }
 
 }

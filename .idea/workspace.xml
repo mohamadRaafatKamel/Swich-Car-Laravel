@@ -4,8 +4,9 @@
     <list default="true" id="f69de148-7036-4e81-97c0-63c27220548b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/addcar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/image.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/brand.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/brand.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/UserAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/UserAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Media.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/addcar/image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/image.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,6 +167,9 @@
       <workItem from="1615413327319" duration="1774000" />
       <workItem from="1615415141055" duration="1790000" />
       <workItem from="1615416988241" duration="1482000" />
+      <workItem from="1615551323374" duration="1769000" />
+      <workItem from="1615553228901" duration="2081000" />
+      <workItem from="1615555334055" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1615404712390</created>
@@ -181,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615404867711</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="image car">
+      <created>1615551368857</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615551368857</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +200,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="image car" />
+    <option name="LAST_COMMIT_MESSAGE" value="image car" />
   </component>
 </project>

@@ -56,8 +56,10 @@
                                         </div>
 
                                         <div class="prod-btn">
-                                            <a href="#"><i class="fa fa-star" aria-hidden="true"></i>جعلها الرئيسبه</a>
-                                            <a href="{{route('addCar.image.destroy',$image->id)}}"><i class="fa fa-thumbs-up" aria-hidden="true"></i>مسح</a>
+                                            @if($image->notes != '1')
+                                                <a href="{{route('addCar.image.prime',$image->id)}}"><i class="fa fa-star" aria-hidden="true"></i>جعلها الرئيسبه</a>
+                                            @endif
+                                            <a href="{{route('addCar.image.destroy',$image->id)}}"><i class="fa fa-thumbs-up0" aria-hidden="true"></i>مسح</a>
                                         </div>
                                     </div>
                                 </div>
@@ -65,6 +67,20 @@
                                 @endisset
 
                             </div>
+
+                    <div class="big-box">
+                        <div class="big-dit-b clearfix">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="right-big-b">
+                                    <div class="tight-btn-b clearfix">
+                                        <a class="view-btn" href="{{route('addCar.brand')}}">التالي</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                         </div>
                     </div>
