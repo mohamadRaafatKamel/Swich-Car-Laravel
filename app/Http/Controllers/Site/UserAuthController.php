@@ -143,6 +143,6 @@ class UserAuthController extends Controller
     		session()->pull('LoggedUser');
     		return redirect('login');
     	}
-        return redirect('home');
+        return redirect()->route('home');
     }
 }

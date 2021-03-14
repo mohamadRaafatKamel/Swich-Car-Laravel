@@ -53,6 +53,27 @@ Route::group(['middleware'=>'isLogged'],function (){
     Route::get('brandsave',[AddCarController::class, 'setBrand'])->name('addCar.brand.save');
     // type
     Route::get('type',[AddCarController::class, 'type'])->name('addCar.type');
+    Route::get('typesave',[AddCarController::class, 'setType'])->name('addCar.type.save');
+    // Category
+    Route::get('category',[AddCarController::class, 'category'])->name('addCar.category');
+    Route::get('categorysave',[AddCarController::class, 'setCategory'])->name('addCar.category.save');
+
+    // Year
+    Route::get('year',[AddCarController::class, 'year'])->name('addCar.year');
+    Route::get('yearsave',[AddCarController::class, 'setYear'])->name('addCar.year.save');
+    // City
+    Route::get('city',[AddCarController::class, 'city'])->name('addCar.city');
+    Route::get('citysave',[AddCarController::class, 'setCity'])->name('addCar.city.save');
+    // Elker
+    Route::get('elker',[AddCarController::class, 'elker'])->name('addCar.elker');
+    Route::get('elkersave',[AddCarController::class, 'setElker'])->name('addCar.elker.save');
+    // Color
+    Route::get('color',[AddCarController::class, 'color'])->name('addCar.color');
+    Route::get('Colorsave',[AddCarController::class, 'setColor'])->name('addCar.color.save');
+
+    Route::get('more',[AddCarController::class, 'more'])->name('addCar.more');
+
+
 
 });
 

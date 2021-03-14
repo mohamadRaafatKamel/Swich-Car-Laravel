@@ -1,6 +1,6 @@
 @extends('layouts.site')
 
-@section('title','design Page')
+@section('title','موديل')
 
 
 @section('content')
@@ -12,6 +12,9 @@
                     <div class="row">
                         <ol class="breadcrumb">
                             <li><a href="{{ route('addCar.image') }}">صور </a></li>
+                            <li><a href="{{ route('addCar.brand') }}">شركه </a></li>
+                            <li><a href="{{ route('addCar.type') }}">نوع </a></li>
+                            <li><a href="{{ route('addCar.category') }}">تصنيف </a></li>
                         </ol>
                     </div>
                 </div>
@@ -22,16 +25,16 @@
             <div class="container">
                 <div class="row">
                     <div class="furniture-main">
-                        <h2>الماركه</h2>
+                        <h2>موديل</h2>
                             <div class="col-md-12 col-sm-12">
                                 <div class="furniture-right">
                                     <div class="right-list-f">
                                         <ul>
-                                            @if($brands)
-                                                @foreach($brands as $brand)
-                                                    <li id="{{$brand->id}}">
-                                                        <a href="#"><img width="32" src="{{asset($brand->image)}}" alt="" />
-                                                            {{$brand->name}}
+                                            @if($datas)
+                                                @foreach($datas as $data)
+                                                    <li id="{{$data}}">
+                                                        <a href="#">
+                                                            {{$data}}
                                                         </a>
                                                     </li>
                                                 @endforeach
@@ -54,16 +57,17 @@
         $(document).ready(function(){
             $("li").click(function(){
                 var id = this.id;
+                //console.log(id);
                 $.ajax({
                     type: 'get',
-                    url: "{{route('addCar.brand.save') }}" ,
+                    url: "{{route('addCar.year.save') }}" ,
                     data: {
                         id : id
                     },
                     success: function (data) {
-                        //console.log(data);
+                        console.log(data);
                         if(data.success == 1){
-                            location.replace("{{ route('addCar.type') }}");
+                            location.replace("{{ route('addCar.city') }}");
                         }
                     }, error: function (reject) {
                         //console.log(reject);

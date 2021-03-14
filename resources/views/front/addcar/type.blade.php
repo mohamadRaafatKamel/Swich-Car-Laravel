@@ -12,6 +12,7 @@
                     <div class="row">
                         <ol class="breadcrumb">
                             <li><a href="{{ route('addCar.image') }}">صور </a></li>
+                            <li><a href="{{ route('addCar.brand') }}">شركه </a></li>
                         </ol>
                     </div>
                 </div>
@@ -22,16 +23,16 @@
             <div class="container">
                 <div class="row">
                     <div class="furniture-main">
-                        <h2>الماركه</h2>
+                        <h2>النوع</h2>
                             <div class="col-md-12 col-sm-12">
                                 <div class="furniture-right">
                                     <div class="right-list-f">
                                         <ul>
-                                            @if($brands)
-                                                @foreach($brands as $brand)
-                                                    <li id="{{$brand->id}}">
-                                                        <a href="#"><img width="32" src="{{asset($brand->image)}}" alt="" />
-                                                            {{$brand->name}}
+                                            @if($types)
+                                                @foreach($types as $type)
+                                                    <li id="{{$type->id}}">
+                                                        <a href="#">
+                                                            {{$type->name}}
                                                         </a>
                                                     </li>
                                                 @endforeach
@@ -54,16 +55,17 @@
         $(document).ready(function(){
             $("li").click(function(){
                 var id = this.id;
+                //console.log(id);
                 $.ajax({
                     type: 'get',
-                    url: "{{route('addCar.brand.save') }}" ,
+                    url: "{{route('addCar.type.save') }}" ,
                     data: {
                         id : id
                     },
                     success: function (data) {
-                        //console.log(data);
+                        console.log(data);
                         if(data.success == 1){
-                            location.replace("{{ route('addCar.type') }}");
+                            location.replace("{{ route('addCar.category') }}");
                         }
                     }, error: function (reject) {
                         //console.log(reject);
