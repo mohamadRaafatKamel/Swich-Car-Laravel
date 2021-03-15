@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <div class="furniture-main">
-                        <h2>الكير</h2>
+                        <h2>اللون</h2>
                             <div class="col-md-12 col-sm-12">
                                 <div class="furniture-right">
                                     <div class="right-list-f">
@@ -70,7 +70,7 @@
                     success: function (data) {
                         console.log(data);
                         if(data.success == 1){
-                            location.replace("{{ route('addCar.more') }}");
+                            location.replace("{{ route('addCar.info') }}");
                         }
                     }, error: function (reject) {
                         //console.log(reject);

@@ -203,5 +203,14 @@ class AddCarController extends Controller
         }
     }
 
+    public function carInfo()
+    {
+        $car = Car::select()->find(session('CarNotFinish'));
+        $carInfo=[
+            'type'=>$car->type(),
+        ];
+        return view('front.addCar.carinfo',compact('carInfo'));
+    }
+
 
 }

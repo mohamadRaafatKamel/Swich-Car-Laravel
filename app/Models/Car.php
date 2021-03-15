@@ -61,4 +61,13 @@ class Car extends Model
         }
     }
 
+    public function get()
+    {
+        $this->count();
+    }
+
+    public function getType(){
+        return "typeeee";
+    }
+
 }

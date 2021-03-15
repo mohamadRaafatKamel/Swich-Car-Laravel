@@ -57,7 +57,6 @@ Route::group(['middleware'=>'isLogged'],function (){
     // Category
     Route::get('category',[AddCarController::class, 'category'])->name('addCar.category');
     Route::get('categorysave',[AddCarController::class, 'setCategory'])->name('addCar.category.save');
-
     // Year
     Route::get('year',[AddCarController::class, 'year'])->name('addCar.year');
     Route::get('yearsave',[AddCarController::class, 'setYear'])->name('addCar.year.save');
@@ -71,7 +70,7 @@ Route::group(['middleware'=>'isLogged'],function (){
     Route::get('color',[AddCarController::class, 'color'])->name('addCar.color');
     Route::get('Colorsave',[AddCarController::class, 'setColor'])->name('addCar.color.save');
 
-    Route::get('more',[AddCarController::class, 'more'])->name('addCar.more');
+    Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
 
 
 
