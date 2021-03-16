@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f69de148-7036-4e81-97c0-63c27220548b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/front/addcar/carinfo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/addcar/agent.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/addcar/slnder.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/AddCarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/addcar/carinfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/carinfo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/addcar/color.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/addcar/color.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -188,6 +190,11 @@
       <workItem from="1615739733609" duration="1040000" />
       <workItem from="1615825236361" duration="1365000" />
       <workItem from="1615829317795" duration="1252000" />
+      <workItem from="1615845052201" duration="653000" />
+      <workItem from="1615909076590" duration="1466000" />
+      <workItem from="1615930471049" duration="1956000" />
+      <workItem from="1615932456230" duration="1789000" />
+      <workItem from="1615934266715" duration="1099000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1615404712390</created>
@@ -231,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615739855475</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add car">
+      <created>1615845081771</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615845081771</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add car">
+      <created>1615909174806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615909174806</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

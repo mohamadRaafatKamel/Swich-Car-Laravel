@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Models\Agent;
 use App\Models\Brand;
 use App\Models\Car;
 use App\Models\Category;
 use App\Models\City;
 use App\Models\Color;
 use App\Models\Media;
+use App\Models\Slnder;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -203,13 +205,48 @@ class AddCarController extends Controller
         }
     }
 
+    public function agent()
+    {
+        $datas = Agent::select()->active()->get();
+        return view('front.addCar.agent',compact('datas'));
+    }
+
+    public function setAgent()
+    {
+        try {
+            if(isset($_GET['id'])){
+                $car = Car::select()->find(session('CarNotFinish'));
+                $car->update(['agent_id'=> $_GET['id'] ]);
+                return ['success'=>1];
+            }
+        }catch (\Exception $ex) {
+            return ['error'=>1];
+        }
+    }
+
+    public function slnder()
+    {
+        $datas = Slnder::select()->active()->get();
+        return view('front.addCar.slnder',compact('datas'));
+    }
+
+    public function setSlnder()
+    {
+        try {
+            if(isset($_GET['id'])){
+                $car = Car::select()->find(session('CarNotFinish'));
+                $car->update(['slnder_id'=> $_GET['id'] ]);
+                return ['success'=>1];
+            }
+        }catch (\Exception $ex) {
+            return ['error'=>1];
+        }
+    }
+
     public function carInfo()
     {
         $car = Car::select()->find(session('CarNotFinish'));
-        $carInfo=[
-            'type'=>$car->type(),
-        ];
-        return view('front.addCar.carinfo',compact('carInfo'));
+        return view('front.addCar.carinfo',compact('car'));
     }
 
 

@@ -1,6 +1,6 @@
 @extends('layouts.site')
 
-@section('title','المدينه')
+@section('title','سلندر')
 
 
 @section('content')
@@ -18,6 +18,8 @@
                             <li><a href="{{ route('addCar.year') }}">الموديل </a></li>
                             <li><a href="{{ route('addCar.city') }}">المدينه </a></li>
                             <li><a href="{{ route('addCar.elker') }}">الكير </a></li>
+                            <li><a href="{{ route('addCar.color') }}">اللون </a></li>
+                            <li><a href="{{ route('addCar.agent') }}">الاجنس </a></li>
                         </ol>
                     </div>
                 </div>
@@ -28,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="furniture-main">
-                        <h2>اللون</h2>
+                        <h2>سلندر</h2>
                             <div class="col-md-12 col-sm-12">
                                 <div class="furniture-right">
                                     <div class="right-list-f">
@@ -63,14 +65,14 @@
                 //console.log(id);
                 $.ajax({
                     type: 'get',
-                    url: "{{route('addCar.color.save') }}" ,
+                    url: "{{route('addCar.slnder.save') }}" ,
                     data: {
                         id : id
                     },
                     success: function (data) {
                         console.log(data);
                         if(data.success == 1){
-                            location.replace("{{ route('addCar.agent') }}");
+                            location.replace("{{ route('addCar.info') }}");
                         }
                     }, error: function (reject) {
                         //console.log(reject);

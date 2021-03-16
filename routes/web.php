@@ -69,6 +69,12 @@ Route::group(['middleware'=>'isLogged'],function (){
     // Color
     Route::get('color',[AddCarController::class, 'color'])->name('addCar.color');
     Route::get('Colorsave',[AddCarController::class, 'setColor'])->name('addCar.color.save');
+    // Agent
+    Route::get('agent',[AddCarController::class, 'agent'])->name('addCar.agent');
+    Route::get('agentsave',[AddCarController::class, 'setAgent'])->name('addCar.agent.save');
+    // Slnder
+    Route::get('slnder',[AddCarController::class, 'slnder'])->name('addCar.slnder');
+    Route::get('slndersave',[AddCarController::class, 'setSlnder'])->name('addCar.slnder.save');
 
     Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
 

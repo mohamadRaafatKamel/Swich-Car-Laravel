@@ -17,7 +17,8 @@
                         <div class="form-group">
                             <label for="phone">الاسم</label>
                             <input type="text" class="form-control" name="name" placeholder="add name"
-                                   value="{{$carInfo['type']}}" readonly>
+                                   value="{{
+    $car->getBrand()." ".$car->getType()." ".$car->getCategory()." ".$car->getSlnder()." ".$car->model}}" readonly>
                         </div>
 
                         <div class="form-group">

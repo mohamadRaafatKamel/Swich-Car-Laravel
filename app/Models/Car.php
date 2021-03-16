@@ -66,8 +66,76 @@ class Car extends Model
         $this->count();
     }
 
-    public function getType(){
-        return "typeeee";
+    public function getUser()
+    {
+        $data = User::select()->find($this->user_id );
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getBrand()
+    {
+        $data = Brand::select()->find($this->brand_id  );
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getType()
+    {
+        $data = Type::select()->find($this->type_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getCategory()
+    {
+        $data = Category::select()->find($this->cat_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getSlnder()
+    {
+        $data = Slnder::select()->find($this->slnder_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getCity()
+    {
+        $data = City::select()->find($this->city_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getColor()
+    {
+        $data = Color::select()->find($this->color_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
+    }
+
+    public function getAgent()
+    {
+        $data = Agent::select()->find($this->agent_id);
+        if($data)
+            return $data->name;
+        else
+            return "";
     }
 
 }
