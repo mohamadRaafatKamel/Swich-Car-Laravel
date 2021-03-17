@@ -249,5 +249,24 @@ class AddCarController extends Controller
         return view('front.addCar.carinfo',compact('car'));
     }
 
+    public function carInfoSave(Request $request)
+    {
+        try {
+            $car = Car::select()->find(session('CarNotFinish'));
+            $car->update([
+                'name'=> $request->name,
+                'machen'=> $request->machen,
+                'body'=> $request->body,
+                'fuel'=> $request->fuel,
+                'description'=> $request->description,
+                'price'=> $request->price,
+                'state'=> "1",
+            ]);
+            return redirect()->route('home');
+        }catch (\Exception $ex) {
+            return redirect()->route('addCar.info')->with(['error'=>'توجد مشكله اعد المحاوله']);
+        }
+    }
+
 
 }

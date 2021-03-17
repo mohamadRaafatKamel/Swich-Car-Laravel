@@ -1912,7 +1912,7 @@ header .navbar-default .navbar-header {
 }
 
 .terms-title .breadcrumb>li+li::before {
-	content: "\f101";
+	content: "\f100";
 	font-family: 'FontAwesome';
 	font-size: 12px;
 }

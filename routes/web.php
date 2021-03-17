@@ -77,6 +77,8 @@ Route::group(['middleware'=>'isLogged'],function (){
     Route::get('slndersave',[AddCarController::class, 'setSlnder'])->name('addCar.slnder.save');
 
     Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
+    Route::post('infopost',[AddCarController::class, 'carInfoSave'])->name('addCar.info.save');
+
 
 
 
