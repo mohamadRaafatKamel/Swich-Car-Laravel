@@ -22,9 +22,13 @@
                          <div class="login-sr">
                              <div class="login-signup">
                                  <ul>
-                                     <li><a class="custom-b" href="{{ route('register') }}">انشاء حساب</a></li>
-                                     <li><a href="{{ route('login') }}">تسجيل دخول</a></li>
-                                     <li><a href="{{ route('logout') }}">تسجيل خروج</a></li>
+                                     @if(session()->has('LoggedUser'))
+                                         <li><a class="custom-b" href="{{ route('addCar.image') }}">اضافه سيارة</a></li>
+                                         <li><a href="{{ route('logout') }}">تسجيل خروج</a></li>
+                                     @else
+                                         <li><a class="custom-b" href="{{ route('register') }}">انشاء حساب</a></li>
+                                         <li><a href="{{ route('login') }}">تسجيل دخول</a></li>
+                                     @endif
                                  </ul>
                              </div>
                          </div>

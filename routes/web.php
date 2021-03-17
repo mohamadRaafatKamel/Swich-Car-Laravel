@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\UserAuthController;
 use App\Http\Controllers\Site\AddCarController;
+use App\Http\Controllers\Site\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,7 @@ use App\Http\Controllers\Site\AddCarController;
 |
 */
 
-Route::get('/', function () {
-    return view('front.desgn');
-})->name('home');
+Route::get('/',[SiteController::class, 'home'])->name('home');
 
 Route::group(['middleware'=>'AlreadyLoggedIn'],function (){
 
@@ -78,7 +77,7 @@ Route::group(['middleware'=>'isLogged'],function (){
 
     Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
     Route::post('infopost',[AddCarController::class, 'carInfoSave'])->name('addCar.info.save');
-
+    ################# End add car ############
 
 
 
