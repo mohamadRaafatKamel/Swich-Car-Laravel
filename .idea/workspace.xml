@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f69de148-7036-4e81-97c0-63c27220548b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/front/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/front/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/front/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/front/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +199,8 @@
       <workItem from="1615989575375" duration="1591000" />
       <workItem from="1615991717559" duration="1789000" />
       <workItem from="1615993527299" duration="800000" />
-      <workItem from="1616015898227" duration="680000" />
+      <workItem from="1616015898227" duration="1351000" />
+      <workItem from="1616018288451" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1615404712390</created>
@@ -274,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615987805890</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="home">
+      <created>1616016627486</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616016627486</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +290,7 @@
     <MESSAGE value="image car" />
     <MESSAGE value="brand car" />
     <MESSAGE value="add car" />
-    <option name="LAST_COMMIT_MESSAGE" value="add car" />
+    <MESSAGE value="home" />
+    <option name="LAST_COMMIT_MESSAGE" value="home" />
   </component>
 </project>

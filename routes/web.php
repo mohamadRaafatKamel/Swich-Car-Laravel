@@ -42,41 +42,43 @@ Route::group(['middleware'=>'AlreadyLoggedIn'],function (){
 Route::group(['middleware'=>'isLogged'],function (){
 
     ################# add car ############
-    // image
-    Route::get('addcar',[AddCarController::class, 'addcar'])->name('addCar.image');
-    Route::post('image',[AddCarController::class, 'image'])->name('addCar.image.save');
-    Route::get('delete/{id}',[AddCarController::class, 'imageDestroy'])->name('addCar.image.destroy');
-    Route::get('prime/{id}',[AddCarController::class, 'imagePrime'])->name('addCar.image.prime');
-    // Brand
-    Route::get('brand',[AddCarController::class, 'brand'])->name('addCar.brand');
-    Route::get('brandsave',[AddCarController::class, 'setBrand'])->name('addCar.brand.save');
-    // type
-    Route::get('type',[AddCarController::class, 'type'])->name('addCar.type');
-    Route::get('typesave',[AddCarController::class, 'setType'])->name('addCar.type.save');
-    // Category
-    Route::get('category',[AddCarController::class, 'category'])->name('addCar.category');
-    Route::get('categorysave',[AddCarController::class, 'setCategory'])->name('addCar.category.save');
-    // Year
-    Route::get('year',[AddCarController::class, 'year'])->name('addCar.year');
-    Route::get('yearsave',[AddCarController::class, 'setYear'])->name('addCar.year.save');
-    // City
-    Route::get('city',[AddCarController::class, 'city'])->name('addCar.city');
-    Route::get('citysave',[AddCarController::class, 'setCity'])->name('addCar.city.save');
-    // Elker
-    Route::get('elker',[AddCarController::class, 'elker'])->name('addCar.elker');
-    Route::get('elkersave',[AddCarController::class, 'setElker'])->name('addCar.elker.save');
-    // Color
-    Route::get('color',[AddCarController::class, 'color'])->name('addCar.color');
-    Route::get('Colorsave',[AddCarController::class, 'setColor'])->name('addCar.color.save');
-    // Agent
-    Route::get('agent',[AddCarController::class, 'agent'])->name('addCar.agent');
-    Route::get('agentsave',[AddCarController::class, 'setAgent'])->name('addCar.agent.save');
-    // Slnder
-    Route::get('slnder',[AddCarController::class, 'slnder'])->name('addCar.slnder');
-    Route::get('slndersave',[AddCarController::class, 'setSlnder'])->name('addCar.slnder.save');
+    Route::group(['prefix'=>'NewCar'],function (){
+        // image
+        Route::get('addcar',[AddCarController::class, 'addcar'])->name('addCar.image');
+        Route::post('image',[AddCarController::class, 'image'])->name('addCar.image.save');
+        Route::get('delete/{id}',[AddCarController::class, 'imageDestroy'])->name('addCar.image.destroy');
+        Route::get('prime/{id}',[AddCarController::class, 'imagePrime'])->name('addCar.image.prime');
+        // Brand
+        Route::get('brand',[AddCarController::class, 'brand'])->name('addCar.brand');
+        Route::get('brandsave',[AddCarController::class, 'setBrand'])->name('addCar.brand.save');
+        // type
+        Route::get('type',[AddCarController::class, 'type'])->name('addCar.type');
+        Route::get('typesave',[AddCarController::class, 'setType'])->name('addCar.type.save');
+        // Category
+        Route::get('category',[AddCarController::class, 'category'])->name('addCar.category');
+        Route::get('categorysave',[AddCarController::class, 'setCategory'])->name('addCar.category.save');
+        // Year
+        Route::get('year',[AddCarController::class, 'year'])->name('addCar.year');
+        Route::get('yearsave',[AddCarController::class, 'setYear'])->name('addCar.year.save');
+        // City
+        Route::get('city',[AddCarController::class, 'city'])->name('addCar.city');
+        Route::get('citysave',[AddCarController::class, 'setCity'])->name('addCar.city.save');
+        // Elker
+        Route::get('elker',[AddCarController::class, 'elker'])->name('addCar.elker');
+        Route::get('elkersave',[AddCarController::class, 'setElker'])->name('addCar.elker.save');
+        // Color
+        Route::get('color',[AddCarController::class, 'color'])->name('addCar.color');
+        Route::get('Colorsave',[AddCarController::class, 'setColor'])->name('addCar.color.save');
+        // Agent
+        Route::get('agent',[AddCarController::class, 'agent'])->name('addCar.agent');
+        Route::get('agentsave',[AddCarController::class, 'setAgent'])->name('addCar.agent.save');
+        // Slnder
+        Route::get('slnder',[AddCarController::class, 'slnder'])->name('addCar.slnder');
+        Route::get('slndersave',[AddCarController::class, 'setSlnder'])->name('addCar.slnder.save');
 
-    Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
-    Route::post('infopost',[AddCarController::class, 'carInfoSave'])->name('addCar.info.save');
+        Route::get('carinfo',[AddCarController::class, 'carInfo'])->name('addCar.info');
+        Route::post('infopost',[AddCarController::class, 'carInfoSave'])->name('addCar.info.save');
+    });
     ################# End add car ############
 
 
